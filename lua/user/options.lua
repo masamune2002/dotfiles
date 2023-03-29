@@ -1,3 +1,5 @@
+vim.g.mapleader=" "                        -- map leader to spacebar
+
 vim.opt.showmatch = true                   -- show matching
 vim.opt.mouse = 'v'                        -- middle-click paste with
 vim.opt.hlsearch = true                    -- highlight search
