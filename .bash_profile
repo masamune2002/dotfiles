@@ -23,9 +23,11 @@ alias ll='ls -lG'
 
 #Git
 alias p='git pull'
+alias gc='git commit -m'
+alias gp='git push origin'
+alias gs='git status'
 alias dev='git checkout develop'
 alias br='git branch'
-alias st='git status'
 alias r='git rebase develop'
 alias ri='git rebase develop -i'
 

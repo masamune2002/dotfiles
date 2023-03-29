@@ -60,6 +60,10 @@ return packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
 
+  -- COC
+  use { 'neoclide/coc.nvim', branch='release' }
+  use 'lervag/vimtex'
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
