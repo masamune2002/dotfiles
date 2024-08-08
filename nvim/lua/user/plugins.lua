@@ -38,11 +38,11 @@ packer.init {
   },
 }
 
--- Install your plugins here
+-- Install plugins
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim' -- Have packer manage itself
   use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in Neovim
-  use 'nvim-lua/plenary.nvim' -- Useful lua functions used ny lots of plugins
+  use 'nvim-lua/plenary.nvim' -- Useful lua functions used by lots of plugins
   use 'ryanoasis/vim-devicons'
   use 'honza/vim-snippets'
   use 'scrooloose/nerdtree'                      --file explorer
@@ -55,14 +55,27 @@ return packer.startup(function(use)
   use 'jremmen/vim-ripgrep'                       -- performant grep alt
   use 'jose-elias-alvarez/typescript.nvim'        -- typescript language server and utilities
   use 'pangloss/vim-javascript'                   -- javascript language server and utilities
+  use 'mhartington/formatter.nvim'                -- text formatting
+  use 'lilyinstarlight/vim-sonic-pi'
+  use 'navarasu/onedark.nvim'                     -- theme
 
-    -- Telescope
+  -- Telescope
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
 
-  -- COC
-  use { 'neoclide/coc.nvim', branch='release' }
-  use 'lervag/vimtex'
+  -- LSP
+  use {
+    'williamboman/mason.nvim',
+    'williamboman/mason-lspconfig.nvim',
+    'neovim/nvim-lspconfig'
+  }
+
+  use ({
+    'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
+    config = function()
+      require('lsp_lines').setup()
+    end
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

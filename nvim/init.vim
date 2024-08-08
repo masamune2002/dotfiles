@@ -68,11 +68,4 @@ nnoremap <leader>ov <cmd>:sp ~/.config/nvim/init.vim<cr>
 nnoremap <Leader>sv :source $MYVIMRC<CR>
 nnoremap <leader>wt <cmd>:g/\s$/norm $diw<cr>
 
-" COC (Conquer of Completion)
-" Set tab to scroll suggestions and enter to accept
-if has('nvim-0.4.0') || has('patch-8.2.0750')
-  inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
-  inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
-  inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
-endif
 

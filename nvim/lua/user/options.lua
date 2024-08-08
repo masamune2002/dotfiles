@@ -1,5 +1,10 @@
 vim.g.mapleader=" "                        -- map leader to spacebar
 
+vim.g.sonic_pi_command = 'sonic_pi'
+vim.g.sonic_pi_check = 'version'
+vim.g.sonic_pi_eval = ''
+vim.g.sonic_pi_stop = 'stop'
+
 vim.opt.showmatch = true                   -- show matching
 vim.opt.mouse = 'v'                        -- middle-click paste with
 vim.opt.hlsearch = true                    -- highlight search
@@ -22,4 +27,6 @@ vim.opt.smartcase = true                   -- smart case
 vim.opt.smartindent = true                 -- smart indenting
 vim.opt.updatetime = 300                   -- faster completion (4000ms default)
 vim.opt.scrolloff = 8                      -- start scrolling when within 8 lines near bottom/top
+vim.opt.listchars = 'tab:> ,lead:·,trail:·' -- Show whitespace in :list
+vim.opt.list = true                         -- Turn list mode on
 
