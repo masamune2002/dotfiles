@@ -1,10 +1,9 @@
 #!/bin/bash
-
 if [[ -f ~/.bashrc ]]; then
   source ~/.bashrc
 fi
 
-export PATH=$PATH:/usr/local/Cellar/postgresql@9.6/9.6.22/bin
+export PATH=$PATH:/opt/nvim-linux64/bin/
 
 #config
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
@@ -12,10 +11,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 #bash
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
-
-#pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
 
 alias ls='ls -aFHG'
 alias ll='ls -lG'

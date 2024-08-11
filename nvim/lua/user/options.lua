@@ -19,7 +19,6 @@ vim.opt.number = true                      -- add line numbers
 vim.opt.relativenumber = true              -- show relative numbers in the sidebar
 vim.opt.wildmode = { 'longest', 'list' }   -- get bash-like tab completions
 vim.opt.cursorline = true                  -- highlight current cursorline
---vim.opt.kp=:Rg                             -- use ripgrep for keyword lookup
 vim.opt.wrap = false
 vim.opt.undofile = true
 vim.opt.showtabline = 2                    -- always show tabs

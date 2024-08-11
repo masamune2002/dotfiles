@@ -12,10 +12,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
     install_path,
   }
   print 'Installing packer close and reopen Neovim...'
-  vim.cmd [[packadd packer.nvim]]
-end
-
--- Autocommand that reloads neovim whenever you save the plugins.lua file
+  vim.cmd [[packadd packer.nvim]] end -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
   augroup packer_user_config
     autocmd!
@@ -37,7 +34,6 @@ packer.init {
     end,
   },
 }
-
 -- Install plugins
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim' -- Have packer manage itself
@@ -57,7 +53,14 @@ return packer.startup(function(use)
   use 'pangloss/vim-javascript'                   -- javascript language server and utilities
   use 'mhartington/formatter.nvim'                -- text formatting
   use 'lilyinstarlight/vim-sonic-pi'
-  use 'navarasu/onedark.nvim'                     -- theme
+
+  -- Themes
+  use 'navarasu/onedark.nvim'
+  --use {'navarasu/onedark.nvim', config = function() vim.cmd.colorscheme("onedark") end }
+--  use ('bluz71/vim-moonfly-colors', { run = 'moonfly' })
+--  vim.cmd.colorscheme("moonfly")
+--  use {'bluz71/vim-moonfly-colors.nvim', config = function() vim.cmd.colorscheme("moonfly") end }
+  --use {'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
 
   -- Telescope
   use 'nvim-telescope/telescope.nvim'

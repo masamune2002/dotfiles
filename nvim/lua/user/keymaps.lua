@@ -26,8 +26,8 @@ keymap("n", "<leader>q", ":wq<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
 
 -- Splits
-keymap("n", "<leader>sh", ":split<CR>", opts)
-keymap("n", "<leader>sv", ":vsplit<CR>", opts)
+keymap("n", "<leader>sh", ":split | :Startify<CR>", opts)
+keymap("n", "<leader>sv", ":vsplit | :Startify<CR>", opts)
 
 -- Better window navigation
 keymap("n", "<leader>h", "<C-w>h", opts)
