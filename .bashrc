@@ -5,18 +5,18 @@ case $- in
 esac
 
 # Path to your oh-my-bash installation.
-export OSH='~/.oh-my-bash'
+export OSH='/home/aingraham/.oh-my-bash'
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
 OSH_THEME="powerline-multiline"
 
 # Uncomment the following line to use case-sensitive completion.
-OMB_CASE_SENSITIVE="true"
+OMB_CASE_SENSITIVE="false"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
-# OMB_HYPHEN_SENSITIVE="false"
+ OMB_HYPHEN_SENSITIVE="false"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
@@ -31,7 +31,7 @@ OMB_CASE_SENSITIVE="true"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 COMPLETION_WAITING_DOTS="true"
