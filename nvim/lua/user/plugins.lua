@@ -37,22 +37,18 @@ packer.init {
 -- Install plugins
 return packer.startup(function(use)
   use 'wbthomason/packer.nvim' -- Have packer manage itself
-  use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in Neovim
-  use 'nvim-lua/plenary.nvim' -- Useful lua functions used by lots of plugins
-  use 'ryanoasis/vim-devicons'
-  use 'honza/vim-snippets'
-  use 'scrooloose/nerdtree'                      --file explorer
-  use 'mhinz/vim-startify'                       -- start screen
   use 'christoomey/vim-system-copy'              -- copy from vim to outside vim
-  use 'tpope/vim-fugitive'                       -- git support
-  use 'tpope/vim-commentary'                     -- commenting
-  use 'tpope/vim-surround'                      -- surround stuff with quotes, brackets, etc.
   use 'mbbill/undotree'
-  use 'jremmen/vim-ripgrep'                       -- performant grep alt
-  use 'jose-elias-alvarez/typescript.nvim'        -- typescript language server and utilities
-  use 'pangloss/vim-javascript'                   -- javascript language server and utilities
   use 'mhartington/formatter.nvim'                -- text formatting
-  use 'lilyinstarlight/vim-sonic-pi'
+  use 'mhinz/vim-startify'                       -- start screen
+  use 'nvim-lua/plenary.nvim' -- Useful lua functions used by lots of plugins
+  use 'nvim-lua/popup.nvim' -- An implementation of the Popup API from vim in Neovim
+  use 'pangloss/vim-javascript'                   -- javascript language server and utilities
+  use 'ryanoasis/vim-devicons'
+  use 'scrooloose/nerdtree'                      --file explorer
+  use 'tpope/vim-commentary'                     -- commenting
+  use 'tpope/vim-fugitive'                       -- git support
+  use 'tpope/vim-surround'                      -- surround stuff with quotes, brackets, etc.
 
   -- Themes
   use 'navarasu/onedark.nvim'

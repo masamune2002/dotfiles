@@ -22,7 +22,7 @@ keymap('n', '<leader>ov', '<cmd>:sp ~/.config/nvim/<CR>', opts)
 
 keymap('n', '<leader>src', '<cmd>:source ~/.config/nvim/init.lua<CR>', opts)
 keymap("n", "<leader>z", "<C-z>", opts)
-keymap("n", "<leader>q", ":wq<CR>", opts)
+keymap("n", "<leader>q", ":q<CR>", opts)
 keymap("n", "<leader>w", ":w<CR>", opts)
 
 -- Splits

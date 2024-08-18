@@ -1,6 +1,19 @@
 require('mason').setup()
 require('mason-lspconfig').setup({
-  ensure_installed = { 'lua_ls', 'terraformls' },
+  ensure_installed = {
+    'ast_grep', -- JSX
+    'bashls', --bash
+    'cssls', --CSS
+    'dockerls', -- Docker
+    'graphql', -- GraphQL
+    'harper_ls', --C, C++, C#, and Markdown
+    'eslint', -- JavaScript
+    'jsonls', -- JSON
+    'lua_ls', --LUA
+    'jedi_language_server', -- Python
+    'html', -- HTML
+    'terraformls' --Terraform
+  },
   automatic_installation = true
 })
 
@@ -16,10 +29,18 @@ end
 
 local lspconfig = require('lspconfig')
 
-lspconfig.lua_ls.setup {
-  on_attach = on_attach
-}
-
+lspconfig['lua_ls'].setup { on_attach = on_attach }
+lspconfig['terraformls'].setup { on_attach = on_attach }
+lspconfig['ast_grep'].setup { on_attach = on_attach }
+lspconfig['bashls'].setup { on_attach = on_attach }
+lspconfig['cssls'].setup { on_attach = on_attach }
+lspconfig['dockerls'].setup { on_attach = on_attach }
+lspconfig['graphql'].setup { on_attach = on_attach }
+lspconfig['harper_ls'].setup { on_attach = on_attach }
+lspconfig['eslint'].setup { on_attach = on_attach }
+lspconfig['jsonls'].setup { on_attach = on_attach }
+lspconfig['lua_ls'].setup { on_attach = on_attach }
+lspconfig['html'].setup { on_attach = on_attach }
 lspconfig['terraformls'].setup { on_attach = on_attach }
 
 vim.diagnostic.config({

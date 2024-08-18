@@ -1,0 +1,16 @@
+[window]
+decorations = "None"
+opacity = 0.95
+blur = true
+startup_mode = "Maximized"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+size = 14
+
+[font.normal]
+family = "JetbrainsMono Nerd Font"
+style = "Bold"

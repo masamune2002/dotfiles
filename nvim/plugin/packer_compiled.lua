@@ -135,11 +135,6 @@ _G.packer_plugins = {
     path = "/home/aingraham/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["typescript.nvim"] = {
-    loaded = true,
-    path = "/home/aingraham/.local/share/nvim/site/pack/packer/start/typescript.nvim",
-    url = "https://github.com/jose-elias-alvarez/typescript.nvim"
-  },
   undotree = {
     loaded = true,
     path = "/home/aingraham/.local/share/nvim/site/pack/packer/start/undotree",
@@ -164,21 +159,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/aingraham/.local/share/nvim/site/pack/packer/start/vim-javascript",
     url = "https://github.com/pangloss/vim-javascript"
-  },
-  ["vim-ripgrep"] = {
-    loaded = true,
-    path = "/home/aingraham/.local/share/nvim/site/pack/packer/start/vim-ripgrep",
-    url = "https://github.com/jremmen/vim-ripgrep"
-  },
-  ["vim-snippets"] = {
-    loaded = true,
-    path = "/home/aingraham/.local/share/nvim/site/pack/packer/start/vim-snippets",
-    url = "https://github.com/honza/vim-snippets"
-  },
-  ["vim-sonic-pi"] = {
-    loaded = true,
-    path = "/home/aingraham/.local/share/nvim/site/pack/packer/start/vim-sonic-pi",
-    url = "https://github.com/lilyinstarlight/vim-sonic-pi"
   },
   ["vim-startify"] = {
     loaded = true,
