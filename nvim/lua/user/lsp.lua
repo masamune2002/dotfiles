@@ -1,3 +1,26 @@
+local cmp = require('cmp')
+local lspconfig = require('lspconfig')
+local luasnip = require('luasnip')
+
+require("luasnip.loaders.from_vscode").lazy_load()
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+  sources = {
+    { name = 'nvim_lsp' },
+    { name = 'luasnip' },
+  },
+  mapping = {
+    ['<Tab>'] = cmp.mapping.select_next_item(),
+    ['<S-Tab>'] = cmp.mapping.select_prev_item(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  },
+})
+
 require('mason').setup()
 require('mason-lspconfig').setup({
   ensure_installed = {
@@ -6,13 +29,13 @@ require('mason-lspconfig').setup({
     'cssls', --CSS
     'dockerls', -- Docker
     'graphql', -- GraphQL
-    'harper_ls', --C, C++, C#, and Markdown
     'eslint', -- JavaScript
     'jsonls', -- JSON
     'lua_ls', --LUA
     'jedi_language_server', -- Python
     'html', -- HTML
-    'terraformls' --Terraform
+    'terraformls', --Terraform
+    'tsserver'
   },
   automatic_installation = true
 })
@@ -27,21 +50,25 @@ local on_attach = function(_,_)
   vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
 end
 
-local lspconfig = require('lspconfig')
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-lspconfig['lua_ls'].setup { on_attach = on_attach }
-lspconfig['terraformls'].setup { on_attach = on_attach }
-lspconfig['ast_grep'].setup { on_attach = on_attach }
-lspconfig['bashls'].setup { on_attach = on_attach }
-lspconfig['cssls'].setup { on_attach = on_attach }
-lspconfig['dockerls'].setup { on_attach = on_attach }
-lspconfig['graphql'].setup { on_attach = on_attach }
-lspconfig['harper_ls'].setup { on_attach = on_attach }
-lspconfig['eslint'].setup { on_attach = on_attach }
-lspconfig['jsonls'].setup { on_attach = on_attach }
-lspconfig['lua_ls'].setup { on_attach = on_attach }
-lspconfig['html'].setup { on_attach = on_attach }
-lspconfig['terraformls'].setup { on_attach = on_attach }
+lspconfig['lua_ls'].setup { on_attach = on_attach , capabilities = capabilities }
+lspconfig['terraformls'].setup { on_attach = on_attach , capabilities = capabilities }
+lspconfig['ast_grep'].setup { on_attach = on_attach , capabilities = capabilities }
+lspconfig['bashls'].setup { on_attach = on_attach , capabilities = capabilities }
+lspconfig['cssls'].setup { on_attach = on_attach , capabilities = capabilities }
+lspconfig['dockerls'].setup { on_attach = on_attach , capabilities = capabilities }
+lspconfig['graphql'].setup { on_attach = on_attach , capabilities = capabilities }
+lspconfig['jsonls'].setup { on_attach = on_attach , capabilities = capabilities }
+lspconfig['lua_ls'].setup { on_attach = on_attach , capabilities = capabilities }
+lspconfig['html'].setup { on_attach = on_attach , capabilities = capabilities }
+lspconfig['gdscript'].setup { on_attach = on_attach , capabilities = capabilities }
+
+lspconfig['tsserver'].setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' }
+}
 
 vim.diagnostic.config({
   virtual_text = false

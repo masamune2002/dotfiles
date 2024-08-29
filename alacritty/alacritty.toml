@@ -9,8 +9,8 @@ history = 10000
 multiplier = 3
 
 [font]
-size = 14
+size = 16
 
 [font.normal]
-family = "JetbrainsMono Nerd Font"
+family = "JetbrainsMono NFM"
 style = "Bold"

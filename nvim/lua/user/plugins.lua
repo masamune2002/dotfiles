@@ -49,6 +49,7 @@ return packer.startup(function(use)
   use 'tpope/vim-commentary'                     -- commenting
   use 'tpope/vim-fugitive'                       -- git support
   use 'tpope/vim-surround'                      -- surround stuff with quotes, brackets, etc.
+ use 'github/copilot.vim'
 
   -- Themes
   use 'navarasu/onedark.nvim'
@@ -64,6 +65,11 @@ return packer.startup(function(use)
 
   -- LSP
   use {
+    'hrsh7th/nvim-cmp',
+    'hrsh7th/cmp-nvim-lsp',
+    'L3MON4D3/LuaSnip',
+    'saadparwaiz1/cmp_luasnip',
+    'rafamadriz/friendly-snippets',
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig'

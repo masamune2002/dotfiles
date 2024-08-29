@@ -1,0 +1,5 @@
+Cheat Sheet for tmux
+
+Leader: Ctrl+S (Ctrl+b by default)
+Split Vertical: Leader + "
+Split Horizontal: Leader + %

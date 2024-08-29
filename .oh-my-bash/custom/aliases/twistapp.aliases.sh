@@ -1,1 +1,1 @@
-alias msbp='make server-build-and-push'
+alias twistapp='cd ~/Code/Twist_and_Stack/'
