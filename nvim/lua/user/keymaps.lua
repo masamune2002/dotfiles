@@ -41,3 +41,5 @@ keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', opts)
 keymap('n', '<leader>fb', '<cmd>Telescope buffers<CR>', opts)
 keymap('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', opts)
 
+-- diepm/vim-rest-console
+keymap("n", "<leader>xr", ":call VrcQuery()<CR>", opts)

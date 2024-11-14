@@ -35,7 +35,7 @@ require('mason-lspconfig').setup({
     'jedi_language_server', -- Python
     'html', -- HTML
     'terraformls', --Terraform
-    'tsserver'
+    'ts_ls'
   },
   automatic_installation = true
 })
@@ -64,7 +64,7 @@ lspconfig['lua_ls'].setup { on_attach = on_attach , capabilities = capabilities 
 lspconfig['html'].setup { on_attach = on_attach , capabilities = capabilities }
 lspconfig['gdscript'].setup { on_attach = on_attach , capabilities = capabilities }
 
-lspconfig['tsserver'].setup {
+lspconfig['ts_ls'].setup {
   on_attach = on_attach,
   capabilities = capabilities,
   filetypes = { 'javascript', 'javascriptreact', 'typescript', 'typescriptreact' }

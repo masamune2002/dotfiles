@@ -49,7 +49,8 @@ return packer.startup(function(use)
   use 'tpope/vim-commentary'                     -- commenting
   use 'tpope/vim-fugitive'                       -- git support
   use 'tpope/vim-surround'                      -- surround stuff with quotes, brackets, etc.
- use 'github/copilot.vim'
+  use 'github/copilot.vim'
+  use { 'diepm/vim-rest-console', ft = { "rest" } }
 
   -- Themes
   use 'navarasu/onedark.nvim'
