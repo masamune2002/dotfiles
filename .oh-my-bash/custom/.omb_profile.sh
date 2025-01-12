@@ -28,6 +28,9 @@ alias ri='git rebase develop -i'
 #PostgreSQL
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+export PGADMIN_DEFAULT_EMAIL='msamune2002@gmail.com'
+export PGADMIN_DEFAULT_PASSWORD='none'
+export PGADMIN_DEFAULT_PASSWORD_FILE='~/.pg_pass'
 
 #Misc.
 alias profile='nvim ~/.bash_profile'

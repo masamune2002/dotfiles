@@ -29,3 +29,5 @@ vim.opt.scrolloff = 8                      -- start scrolling when within 8 line
 vim.opt.listchars = 'tab:> ,lead:·,trail:·' -- Show whitespace in :list
 vim.opt.list = true                         -- Turn list mode on
 
+vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', { noremap = true, silent = true }) -- Esc should clear search results
+
