@@ -51,6 +51,20 @@ return packer.startup(function(use)
   use 'tpope/vim-surround'                      -- surround stuff with quotes, brackets, etc.
   use 'github/copilot.vim'
   use { 'diepm/vim-rest-console', ft = { "rest" } }
+  use {
+    "ThePrimeagen/harpoon",
+    branch = "harpoon2",
+    requires = { {"nvim-lua/plenary.nvim"} }
+  }
+  use {
+  'lewis6991/gitsigns.nvim',
+    requires = {
+      'nvim-lua/plenary.nvim'
+    },
+    config = function()
+      require('gitsigns').setup()
+    end
+  }
 
   -- Themes
   use 'navarasu/onedark.nvim'

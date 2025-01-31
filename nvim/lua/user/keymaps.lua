@@ -39,7 +39,17 @@ keymap("n", "<leader>l", "<C-w>l", opts)
 keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', opts)
 keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', opts)
 keymap('n', '<leader>fb', '<cmd>Telescope buffers<CR>', opts)
-keymap('n', '<leader>fh', '<cmd>Telescope help_tags<CR>', opts)
+keymap('n', '<leader>fs', '<cmd>Telescope git_status<CR>', opts)
 
 -- diepm/vim-rest-console
 keymap("n", "<leader>xr", ":call VrcQuery()<CR>", opts)
+
+-- Fugitive
+keymap("n", "<leader>gs", ":Git<CR>", opts)
+keymap("n", "<leader>gc", ":Git commit<CR>", opts)
+keymap("n", "<leader>gb", ":Git blame<CR>", opts)
+keymap("n", "<leader>gd", ":Git diff<CR>", opts)
+keymap("n", "<leader>gl", ":Git log<CR>", opts)
+keymap("n", "<leader>gv", ":Gvdiffsplit<CR>", opts)
+
+
