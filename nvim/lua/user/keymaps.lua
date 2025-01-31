@@ -51,5 +51,5 @@ keymap("n", "<leader>gb", ":Git blame<CR>", opts)
 keymap("n", "<leader>gd", ":Git diff<CR>", opts)
 keymap("n", "<leader>gl", ":Git log<CR>", opts)
 keymap("n", "<leader>gv", ":Gvdiffsplit<CR>", opts)
-
+keymap("n", "<leader>gh", ":Git -c push.default=current push<CR>", opts)
 
