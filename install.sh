@@ -21,3 +21,4 @@ ln -s .bash_profile ~/.bash_profile
 ln -s .oh-my-bash/custom/ ~/.oh-my-bash/custom/
 ln -s .tmux.conf ~/.tmux.conf
 ln -s nvim/ ~/nvim/
+

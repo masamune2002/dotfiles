@@ -16,7 +16,7 @@ keymap('n', '<leader>u', ':UndotreeToggle<CR> ', opts)
 keymap('n', '<leader>n', ':NERDTreeToggle<CR>', opts)
 
 -- Open
-keymap('n', '<leader>oc', '<cmd>:sp ~/.config/nvim/cheat-sheet.txt<CR>', opts)
+keymap('n', '<leader>oc', '<cmd>:sp ~/.config/nvim/cheat-sheet.md<CR>', opts)
 keymap('n', '<leader>ok', '<cmd>:sp ~/.config/nvim/user/keymaps.lua<CR>', opts)
 keymap('n', '<leader>ov', '<cmd>:sp ~/.config/nvim/<CR>', opts)
 
