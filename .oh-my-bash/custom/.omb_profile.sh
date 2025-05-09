@@ -1,4 +1,4 @@
-export PATH=$PATH:/usr/local/Cellar/postgresql@9.6/9.6.22/bin/:/opt/nvim-linux64/bin/:~/Applications/
+export PATH=$PATH:/usr/local/Cellar/postgresql@9.6/9.6.22/bin/:/opt/nvim-linux64/bin/:~/Applications/:~/.local/bin/
 
 #config
 alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'

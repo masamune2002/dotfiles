@@ -181,6 +181,11 @@ _G.packer_plugins = {
     path = "/home/aingraham/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-caser"] = {
+    loaded = true,
+    path = "/home/aingraham/.local/share/nvim/site/pack/packer/start/vim-caser",
+    url = "https://github.com/arthurxavierx/vim-caser"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/home/aingraham/.local/share/nvim/site/pack/packer/start/vim-commentary",

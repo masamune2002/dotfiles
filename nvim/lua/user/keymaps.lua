@@ -10,6 +10,8 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.api.nvim_set_keymap('n', '<Esc>', ':noh<CR>', { noremap = true, silent = true }) -- Esc should clear search results
+
 -- Leader Commands
 keymap('n', '<leader>pi', ':PlugInstall<CR>', opts)
 keymap('n', '<leader>u', ':UndotreeToggle<CR> ', opts)
@@ -40,6 +42,7 @@ keymap('n', '<leader>ff', '<cmd>Telescope find_files<CR>', opts)
 keymap('n', '<leader>fg', '<cmd>Telescope live_grep<CR>', opts)
 keymap('n', '<leader>fb', '<cmd>Telescope buffers<CR>', opts)
 keymap('n', '<leader>fs', '<cmd>Telescope git_status<CR>', opts)
+keymap("n", "<leader>cc", ":exec 'cd' . expand('%:p:h')<CR>", opts)
 
 -- diepm/vim-rest-console
 keymap("n", "<leader>xr", ":call VrcQuery()<CR>", opts)

@@ -22,3 +22,6 @@ ln -s .oh-my-bash/custom/ ~/.oh-my-bash/custom/
 ln -s .tmux.conf ~/.tmux.conf
 ln -s nvim/ ~/nvim/
 
+sudo dnf copr enable atim/lazygit -y
+sudo dnf install lazygit -y
+

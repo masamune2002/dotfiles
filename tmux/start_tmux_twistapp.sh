@@ -18,7 +18,7 @@ then
 
     # Create and setup pane for NeoVim
     tmux new-window -t $SESSION:1 -n 'nvim'
-    tmux send 'nvim ~/Code/Twist_and_Stack/' ENTER
+    tmux send 'cd ~/Code/Twist_and_Stack/ && nvim' ENTER
     tmux send ':Startify' ENTER
 
     tmux new-window -t $SESSION:2 -n 'bash'
