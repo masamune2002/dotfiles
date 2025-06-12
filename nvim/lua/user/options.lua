@@ -28,5 +28,5 @@ vim.opt.updatetime = 300                   -- faster completion (4000ms default)
 vim.opt.scrolloff = 8                      -- start scrolling when within 8 lines near bottom/top
 vim.opt.listchars = 'tab:> ,lead:·,trail:·' -- Show whitespace in :list
 vim.opt.list = true                         -- Turn list mode on
-
+vim.opt.conceallevel = 1
 

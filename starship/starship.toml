@@ -1,0 +1,62 @@
+format = """
+[╭╴](fg:gray_700)\
+[](#06989A)\
+$directory\
+(\
+[$git_branch](fg:teal_300)\
+$git_status\
+)\
+$time\
+[](fg:#729FCF)\
+$line_break\
+[╰╴>](fg:gray_700)[ ]()
+"""
+
+[line_break]
+disabled = false
+ 
+[fill]
+symbol = ' '
+style = 'bold black'
+
+[os]
+style = "bg:#DA627D"
+disabled = false
+
+[directory]
+style = "fg:black bg:#06989A"
+format = "[ $path ]($style)"
+truncation_length = 5
+home_symbol = "~"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = " 󰈙 "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important 󰈙 " = " 󰈙 "
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol $context ]($style)'
+
+[git_branch]
+symbol = ""
+style = "fg:black bg:#AD7FA8"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "fg:black bg:#AD7FA8"
+format = '[$all_status$ahead_behind ]($style)'
+
+[time]
+style = "fg:black bg:#729FCF"
+disabled = false
+time_format = "%a %b %e %I:%M:%S%P" # Hour:Minute Format
+format = '[ $time ]($style)'
+use_12hr = true

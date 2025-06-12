@@ -49,8 +49,14 @@ return packer.startup(function(use)
   use 'tpope/vim-commentary'                     -- commenting
   use 'tpope/vim-fugitive'                       -- git support
   use 'tpope/vim-surround'                      -- surround stuff with quotes, brackets, etc.
-  use 'github/copilot.vim'
-  use { 'diepm/vim-rest-console', ft = { "rest" } }
+  use 'github/copilot.vim'                      -- AI guidance
+  use { 'diepm/vim-rest-console', ft = { "rest" } } -- Run REST commands from VIM
+  use 'akinsho/toggleterm.nvim'                 -- Press a key to open a terminal in a new buffer
+  use 'natecraddock/sessions.nvim'              -- Preserve sessions across VIM usage
+  use 'epwalsh/obsidian.nvim'                   -- Integration with Obsidian for notes
+  use 'arthurxavierx/vim-caser'                 -- Use a hotkey to change the case of a word
+  use 'supercollider/scvim'
+
   use {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
@@ -77,7 +83,6 @@ return packer.startup(function(use)
   -- Telescope
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-media-files.nvim'
-  use 'arthurxavierx/vim-caser'
 
   -- LSP
   use {
@@ -89,7 +94,7 @@ return packer.startup(function(use)
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig'
-  }
+ }
 
   use ({
     'https://git.sr.ht/~whynothugo/lsp_lines.nvim',
