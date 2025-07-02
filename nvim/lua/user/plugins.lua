@@ -49,13 +49,14 @@ return packer.startup(function(use)
   use 'tpope/vim-commentary'                     -- commenting
   use 'tpope/vim-fugitive'                       -- git support
   use 'tpope/vim-surround'                      -- surround stuff with quotes, brackets, etc.
-  use 'github/copilot.vim'                      -- AI guidance
   use { 'diepm/vim-rest-console', ft = { "rest" } } -- Run REST commands from VIM
   use 'akinsho/toggleterm.nvim'                 -- Press a key to open a terminal in a new buffer
   use 'natecraddock/sessions.nvim'              -- Preserve sessions across VIM usage
   use 'epwalsh/obsidian.nvim'                   -- Integration with Obsidian for notes
   use 'arthurxavierx/vim-caser'                 -- Use a hotkey to change the case of a word
   use 'supercollider/scvim'
+  use 'tidalcycles/vim-tidal'
+  use 'szymonwilczek/vim-be-better'
 
   use {
     "ThePrimeagen/harpoon",

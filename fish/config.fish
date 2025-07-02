@@ -31,4 +31,4 @@ alias vprofile='nvim ~/.config/nvim/'
 alias code='cd ~/Code'
 alias cfg='cd ~/.config'
 
-
+alias vimia='python3 ~/Apps/chronicles-of-vimia/src/run_arcade_mode.py'
